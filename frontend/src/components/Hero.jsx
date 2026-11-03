@@ -70,10 +70,12 @@ const Hero = () => (
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.4 }}
     >
-      <Link to="/login" className="rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 px-7 py-3 text-sm font-bold text-slate-950 transition-transform duration-300 hover:scale-105">
-        Log in or sign up
-      </Link>
-      <a href="https://chat.whatsapp.com/KUvfa2sCnYO8Z8GZ1llj2H" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 bg-white/5 px-7 py-3 text-sm font-bold text-slate-100 transition-all duration-300 hover:border-white/30 hover:bg-white/10">
+      <a
+        href="https://chat.whatsapp.com/KUvfa2sCnYO8Z8GZ1llj2H"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full border border-white/15 bg-white/5 px-7 py-3 text-sm font-bold text-slate-100 transition-all duration-300 hover:border-white/30 hover:bg-white/10"
+      >
         Join the community
       </a>
     </motion.div>
