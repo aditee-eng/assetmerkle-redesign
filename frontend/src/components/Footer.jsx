@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaXTwitter, FaDiscord, FaInstagram, FaLinkedin } from "react-icons/fa6";
-import { BsFillSendFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -41,7 +40,7 @@ const Footer = () => {
                     <motion.div variants={columnVariants} className="flex flex-col">
                         <Link to={'/'} className="flex items-center gap-3 mb-4 group">
                             <img src="/logo.png" className='h-8 w-8 transition-transform duration-300 group-hover:scale-110' alt="Assetmerkle Logo" />
-                            <span className="font-display text-lg font-bold uppercase tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-yellow-300">
+                            <span className="font-display text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-yellow-300">
                                 Assetmerkle
                             </span>
                         </Link>
@@ -57,7 +56,7 @@ const Footer = () => {
                     </motion.div>
 
                     <motion.div variants={columnVariants}>
-                        <h3 className="font-display text-sm font-semibold mb-5 text-white uppercase tracking-wider">Quick Links</h3>
+                        <h3 className="font-display text-sm font-semibold mb-5 text-white">Explore</h3>
                         <ul className="space-y-3.5">
                             <li><Link to={'/'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">About</Link></li>
                             <li><Link to={'/events'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Events</Link></li>
@@ -68,7 +67,7 @@ const Footer = () => {
                     </motion.div>
 
                     <motion.div variants={columnVariants}>
-                        <h3 className="font-display text-sm font-semibold mb-5 text-white uppercase tracking-wider">Partner with Us</h3>
+                        <h3 className="font-display text-sm font-semibold mb-5 text-white">Partner with us</h3>
                         <ul className="space-y-3.5">
                             <li><Link to={'/collaborate'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Collaborate</Link></li>
                             <li><Link to={'/sponsor'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Sponsor Us</Link></li>
@@ -76,7 +75,7 @@ const Footer = () => {
                     </motion.div>
 
                     <motion.div variants={columnVariants}>
-                        <h3 className="font-display text-sm font-semibold mb-5 text-white uppercase tracking-wider">Get in Touch</h3>
+                        <h3 className="font-display text-sm font-semibold mb-5 text-white">Stay in the loop</h3>
                         <a href="mailto:assetmerkle@gmail.com" className="text-amber-400 hover:text-amber-300 transition-colors duration-300 text-sm font-medium">
                             assetmerkle@gmail.com
                         </a>
@@ -84,11 +83,9 @@ const Footer = () => {
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-500/40 focus:ring-1 focus:ring-amber-500/40 transition-all duration-300 pr-12"
+                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-500/40 focus:ring-1 focus:ring-amber-500/40 transition-all duration-300 pr-28"
                             />
-                            <button type="submit" aria-label="Subscribe" className="absolute right-0 h-full w-12 flex items-center justify-center text-slate-400 hover:text-black hover:bg-amber-400 rounded-r-lg transition-all duration-300">
-                                <BsFillSendFill size={16} />
-                            </button>
+                            <button type="submit" className="absolute right-1 top-1 bottom-1 px-4 rounded-md bg-amber-400 text-black text-sm font-bold hover:bg-amber-300 transition-colors duration-300">Subscribe</button>
                         </form>
                     </motion.div>
                 </div>

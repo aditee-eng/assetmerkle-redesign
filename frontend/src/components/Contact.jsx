@@ -9,20 +9,22 @@ const partnerOptions = [
         title: "Collaborate",
         description: "Unlock the power of collaboration and knowledge-sharing in blockchain and web3 technology with our vibrant community.",
         handler: () => console.log('Navigate to Collaborate'),
-        link : '/collaborate'
+        link : '/collaborate',
+        cta: 'Propose a collaboration'
     },
     {
         icon: "/sponsor.png",
         title: "Sponsor",
         description: "Boost your brand and empower innovation in blockchain and web3 technology as a valued community sponsor.",
         handler: () => console.log('Navigate to Sponsor'),
-        link : '/sponsor'
+        link : '/sponsor',
+        cta: 'Become a sponsor'
     }
 ];
 
 // Reusable Arrow component for the cards
 const ArrowIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
     </svg>
 );
@@ -78,9 +80,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="relative isolate min-h-[600px] w-full bg-black flex flex-col items-center justify-center py-20 px-4">
-            <div className="absolute inset-0 bg-dot-white/[0.2]"></div>
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="relative isolate min-h-[600px] w-full flex flex-col items-center justify-center py-20 px-4">
             
             {/* Main animated container */}
             <motion.div
@@ -110,20 +110,21 @@ const Contact = () => {
                             variants={cardVariants} // Use the card container variants
                             onMouseMove={handleMouseMove}
                             onClick={card.handler}
-                            className="group relative w-full max-w-sm h-80 p-8 rounded-xl bg-white/5 border border-white/20 flex flex-col items-center text-center cursor-pointer transition-all duration-300 hover:!scale-105"
+                            className="group relative w-full max-w-sm min-h-[22rem] p-8 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col cursor-pointer transition-all duration-300 hover:border-amber-400/40"
                             style={{ backgroundImage: `radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(250, 204, 21, 0.15), transparent 40%)` }}
                         >
-                      <Link to={`${card.link}`}>
+                      <Link to={`${card.link}`} className="flex flex-col flex-grow items-start text-left">
                             <motion.div variants={cardItemVariants} className="w-20 h-20 mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border border-yellow-400/30 shadow-lg">
                                 <img src={card.icon} alt={`${card.title} icon`} className="w-12 h-12" />
                             </motion.div>
 
-                            <motion.h3 variants={cardItemVariants} className="text-2xl font-bold text-white mb-3 uppercase tracking-wider">{card.title}</motion.h3>
-                            <motion.p variants={cardItemVariants} className="text-gray-400 text-base flex-grow">{card.description}</motion.p>
+                            <motion.h3 variants={cardItemVariants} className="text-2xl font-bold text-white mb-3">{card.title}</motion.h3>
+                            <motion.p variants={cardItemVariants} className="text-gray-400 text-base flex-grow max-w-xs">{card.description}</motion.p>
                             
-                            <motion.div variants={cardItemVariants} className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <motion.span variants={cardItemVariants} className="mt-6 inline-flex items-center gap-2 rounded-full border border-amber-400/60 px-5 py-2.5 text-sm font-bold text-amber-300 transition-colors duration-300 group-hover:bg-amber-400 group-hover:text-black">
+                                {card.cta}
                                 <ArrowIcon />
-                            </motion.div>
+                            </motion.span>
                         </Link>
                         </motion.div>
                     ))}

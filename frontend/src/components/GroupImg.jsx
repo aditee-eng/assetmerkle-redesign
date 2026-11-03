@@ -33,7 +33,7 @@ const TeamGallery = () => {
 
   return (
     <section 
-      className="relative w-full mx-auto bg-black text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative w-full mx-auto text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
       onMouseMove={handleMouseMove} // Track mouse movement on the whole section
     >
       <div className="container mx-auto max-w-7xl">
@@ -67,16 +67,18 @@ const TeamGallery = () => {
               <img 
                 src="WhatsApp Image 2026-09-01 at 22.05.35.jpeg"
                 alt="Our team" 
-                className="w-full h-auto object-cover opacity-90 mx-auto" 
+                className="w-full h-auto object-cover mx-auto" 
               />
             </div>
           </motion.div>
 
+          <motion.p variants={itemVariants} className="mt-6 text-center text-gray-400 max-w-xl mx-auto">
+            Students from IGDTUW learning, building and shipping Web3 projects together.
+          </motion.p>
+
         </motion.div>
       </div>
 
-      {/* --- Blending Gradient --- */}
-      <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-black to-transparent pointer-events-none" />
     </section>
   );
 };

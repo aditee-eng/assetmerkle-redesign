@@ -13,7 +13,7 @@ const Layout = () => {
     <div className="relative min-h-screen bg-[#050507] text-white overflow-hidden flex flex-col justify-between">
       {/* Ambient background glow blobs (hidden on SheVibes) */}
       {!isVibeathon && (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-60">
           <motion.div
             className="absolute -top-[10%] left-[10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent blur-[100px]"
             animate={{
@@ -58,10 +58,10 @@ const Layout = () => {
 
       {/* Interactive global DotField background (hidden on SheVibes) */}
       {!isVibeathon && (
-        <div className="fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none opacity-75">
+        <div className="fixed inset-0 w-full h-full z-0 overflow-hidden pointer-events-none opacity-30">
           <DotField
-            dotRadius={3}
-            dotSpacing={14}
+            dotRadius={2}
+            dotSpacing={28}
             cursorRadius={500}
             cursorForce={0.13}
             bulgeOnly
