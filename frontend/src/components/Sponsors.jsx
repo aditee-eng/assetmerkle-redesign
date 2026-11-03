@@ -45,7 +45,7 @@ const Sponsors = () => {
           variants={titleVariants}
           className="font-sans text-3xl md:text-4xl font-black text-center mb-12 text-white tracking-tight"
         >
-          Supported by Industry <span className="font-serif italic font-normal text-amber-400">Leaders</span>
+          Supported by Industry Leaders
         </motion.h2>
       </motion.div>
 
@@ -58,15 +58,15 @@ const Sponsors = () => {
           {duplicatedSponsors.map((sponsor, index) => (
             <li key={index} className="flex-shrink-0">
               <div
-                className="w-48 h-32 flex flex-col items-center justify-center p-8 bg-white/[0.15] rounded-2xl border border-white/10
-                           transition-all duration-300 group-hover:bg-white/[0.22]"
+                className="w-48 h-32 flex flex-col items-center justify-center p-8 bg-white rounded-2xl border border-white/10
+                           transition-all duration-300 group-hover:-translate-y-1"
               >
                 <img
                   src={sponsor.image}
                   alt={`${sponsor.name} logo`}
-                  className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-screen m-2"
+                  className="max-w-full max-h-full object-contain m-2"
                 />
-                <div><p className="text-[oklch(87.2%_0.01_258.338)]">{sponsor.name}</p></div>
+                <div><p className="text-slate-700 text-sm font-medium">{sponsor.name}</p></div>
 
               </div>
             </li>

@@ -53,7 +53,7 @@ const Navbar = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className={`relative font-sans text-[12px] font-bold tracking-widest px-4 py-2.5 uppercase transition-all duration-300 rounded-full ${isActive ? 'text-white' : 'text-slate-300 hover:text-white'
+                className={`relative font-sans text-sm font-medium px-4 py-2.5 transition-all duration-300 rounded-full ${isActive ? 'text-white' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 {isActive && (
@@ -74,7 +74,7 @@ const Navbar = () => {
 <div className="hidden lg:block">
   <Link
     to="/vibeathon"
-    className="relative group inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#CF547A] to-[#CE4777] text-[#FBF4F7] font-extrabold text-[12px] tracking-widest uppercase shadow-md shadow-[#CE4777]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#CE4777]/50 active:scale-95"
+    className="relative group inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#CF547A] to-[#CE4777] text-[#FBF4F7] font-bold text-sm shadow-md shadow-[#CE4777]/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#CE4777]/50 active:scale-95"
   >
     <span className="relative z-10">SheVibes</span>
     {/* Subtle shine effect */}
@@ -110,7 +110,7 @@ const Navbar = () => {
                     <Link
                       key={item.label}
                       to={item.path}
-                      className={`font-sans text-[10px] font-bold tracking-widest uppercase transition-colors py-1 ${isActive ? 'text-amber-400 font-extrabold' : 'text-slate-300 hover:text-white'
+                      className={`font-sans text-sm font-medium transition-colors py-1 ${isActive ? 'text-amber-400 font-extrabold' : 'text-slate-300 hover:text-white'
                         }`}
                       onClick={() => setIsMenuOpen(false)}
                     >

@@ -1,137 +1,73 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Handshake, BadgeDollarSign, ArrowUpRight } from "lucide-react";
 
-// Data for the partner cards remains the same
-const partnerOptions = [
-    {
-        icon: "/collaborate.png",
-        title: "Collaborate",
-        description: "Unlock the power of collaboration and knowledge-sharing in blockchain and web3 technology with our vibrant community.",
-        handler: () => console.log('Navigate to Collaborate'),
-        link : '/collaborate',
-        cta: 'Propose a collaboration'
-    },
-    {
-        icon: "/sponsor.png",
-        title: "Sponsor",
-        description: "Boost your brand and empower innovation in blockchain and web3 technology as a valued community sponsor.",
-        handler: () => console.log('Navigate to Sponsor'),
-        link : '/sponsor',
-        cta: 'Become a sponsor'
-    }
+const options = [
+  {
+    title: "Collaborate",
+    description: "Share knowledge and build Web3 projects, workshops and events with our community.",
+    cta: "Propose a collaboration",
+    link: "/collaborate",
+    Icon: Handshake,
+    bg: "from-amber-300 via-amber-400 to-orange-500",
+    dark: true,
+  },
+  {
+    title: "Sponsor",
+    description: "Boost your brand and empower innovation in blockchain and Web3 as a valued community sponsor.",
+    cta: "Become a sponsor",
+    link: "/sponsor",
+    Icon: BadgeDollarSign,
+    bg: "from-violet-500 via-indigo-600 to-blue-700",
+  },
 ];
 
-// Reusable Arrow component for the cards
-const ArrowIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-    </svg>
-);
+const Contact = () => (
+  <section className="relative w-full px-6 py-24">
+    <div className="mx-auto max-w-6xl">
+      <motion.div
+        className="mb-12 max-w-2xl"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-5xl font-black tracking-tight text-white md:text-6xl">Partner with us</h2>
+        <p className="mt-4 text-lg text-slate-400">
+          Whether you want to collaborate or sponsor, your journey with our Web3 community starts here.
+        </p>
+      </motion.div>
 
-// --- Animation Variants ---
-// This variant controls the overall container for the title and cards
-const sectionVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2, // Reveals children one by one
-        },
-    },
-};
-
-// This variant controls the title and paragraph
-const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-// This variant controls the card itself (the container)
-const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        transition: {
-            duration: 0.5,
-            ease: "easeOut",
-            staggerChildren: 0.1, // Animate the card's content one by one
-        },
-    },
-};
-
-// This variant controls the items INSIDE the card (icon, title, etc.)
-const cardItemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
-
-
-const Contact = () => {
-    const handleMouseMove = (e) => {
-        const { currentTarget: target } = e;
-        const rect = target.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        target.style.setProperty("--mouse-x", `${x}px`);
-        target.style.setProperty("--mouse-y", `${y}px`);
-    };
-
-    return (
-        <div className="relative isolate min-h-[600px] w-full flex flex-col items-center justify-center py-20 px-4">
-            
-            {/* Main animated container */}
-            <motion.div
-                className="max-w-7xl mx-auto text-center z-10"
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+      <div className="grid gap-6 md:grid-cols-2">
+        {options.map(({ title, description, cta, link, Icon, bg, dark }, i) => (
+          <motion.div
+            key={title}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: i * 0.12 }}
+          >
+            <Link
+              to={link}
+              className={`group relative flex min-h-[22rem] flex-col justify-between overflow-hidden rounded-[2rem] bg-gradient-to-br ${bg} p-8 md:p-10 ring-1 ring-white/20 transition-transform duration-500 hover:-translate-y-1.5 ${dark ? "text-slate-950" : "text-white"}`}
             >
-                <motion.h1
-                    variants={titleVariants}
-                    className="text-4xl md:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500"
-                >
-                    Partner With Us
-                </motion.h1>
-                <motion.p
-                    variants={titleVariants}
-                    className="text-gray-300 max-w-2xl mx-auto text-lg mb-16"
-                >
-                    Whether you're looking to collaborate or sponsor, your journey with our Web3 community starts here.
-                </motion.p>
-                
-                <div className="flex items-center justify-center gap-8 lg:gap-12 w-full max-w-5xl flex-wrap">
-                    {partnerOptions.map((card) => (
-                      <motion.div
-                            key={card.title}
-                            variants={cardVariants} // Use the card container variants
-                            onMouseMove={handleMouseMove}
-                            onClick={card.handler}
-                            className="group relative w-full max-w-sm min-h-[22rem] p-8 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col cursor-pointer transition-all duration-300 hover:border-amber-400/40"
-                            style={{ backgroundImage: `radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(250, 204, 21, 0.15), transparent 40%)` }}
-                        >
-                      <Link to={`${card.link}`} className="flex flex-col flex-grow items-start text-left">
-                            <motion.div variants={cardItemVariants} className="w-20 h-20 mb-6 rounded-full flex items-center justify-center bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border border-yellow-400/30 shadow-lg">
-                                <img src={card.icon} alt={`${card.title} icon`} className="w-12 h-12" />
-                            </motion.div>
-
-                            <motion.h3 variants={cardItemVariants} className="text-2xl font-bold text-white mb-3">{card.title}</motion.h3>
-                            <motion.p variants={cardItemVariants} className="text-gray-400 text-base flex-grow max-w-xs">{card.description}</motion.p>
-                            
-                            <motion.span variants={cardItemVariants} className="mt-6 inline-flex items-center gap-2 rounded-full border border-amber-400/60 px-5 py-2.5 text-sm font-bold text-amber-300 transition-colors duration-300 group-hover:bg-amber-400 group-hover:text-black">
-                                {card.cta}
-                                <ArrowIcon />
-                            </motion.span>
-                        </Link>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.div>
-        </div>
-    );
-};
+              <span className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-white/25 blur-2xl" />
+              <Icon className={`absolute -bottom-6 -right-4 h-56 w-56 ${dark ? "text-black/10" : "text-white/15"}`} strokeWidth={1} />
+              <div className="relative">
+                <h3 className="text-4xl font-black tracking-tight">{title}</h3>
+                <p className={`mt-3 max-w-sm text-base md:text-lg ${dark ? "text-slate-900/75" : "text-white/80"}`}>{description}</p>
+              </div>
+              <span className={`relative mt-10 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-bold ${dark ? "bg-slate-950 text-white" : "bg-white text-slate-950"}`}>
+                {cta}
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Contact;

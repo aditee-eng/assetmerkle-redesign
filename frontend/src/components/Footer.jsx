@@ -35,6 +35,14 @@ const Footer = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
+                <div className="mb-16 flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-amber-400/25 bg-gradient-to-r from-amber-400/15 via-amber-400/5 to-violet-500/15 p-8 md:p-10">
+                    <div>
+                        <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">Ready to build with us?</h2>
+                        <p className="mt-2 text-slate-400">Join the community and start building Web3 projects at IGDTUW.</p>
+                    </div>
+                    <Link to={'/login'} className="rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 px-7 py-3 text-sm font-bold text-slate-950 transition-transform duration-300 hover:scale-105">Log in or sign up</Link>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
                     <motion.div variants={columnVariants} className="flex flex-col">
@@ -95,6 +103,7 @@ const Footer = () => {
                         Assetmerkle © {new Date().getFullYear()} . All rights reserved.
                     </p>
                 </motion.div>
+                <div aria-hidden="true" className="pointer-events-none select-none text-center font-black leading-none tracking-tighter text-white/[0.04] text-[16vw] mt-6 -mb-4">AssetMerkle</div>
             </motion.div>
         </footer>
     );

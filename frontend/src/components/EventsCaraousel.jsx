@@ -193,7 +193,7 @@ const EventCard = ({ card }) => {
         transformStyle: 'preserve-3d',
         transition: 'transform 0.15s ease-out',
       }}
-      className="group h-full bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 border border-white/10 flex flex-col text-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:border-amber-400/30 transition-colors duration-500 spotlight-card"
+      className="group h-full bg-white/[0.05] backdrop-blur-xl rounded-2xl p-6 border border-white/10 flex flex-col text-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:border-amber-400/30 transition-colors duration-500 spotlight-card"
     >
       <div className="mb-6 overflow-hidden rounded-xl border border-white/5 bg-black/40 h-48 flex items-center justify-center [transform:translateZ(20px)]">
         <img
@@ -235,7 +235,7 @@ const EventsCaraousel = () => {
       <SwiperStyles />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h3 className="font-sans text-3xl md:text-4xl font-black mb-12 text-center text-white tracking-tight">
-          Creating Impact Through <span className="font-serif italic font-normal text-amber-400">Events</span>
+          Creating Impact Through Events
         </h3>
         
         <Swiper
