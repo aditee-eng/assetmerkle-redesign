@@ -4,6 +4,8 @@ import Sponsors from '../components/Sponsors';
 import EventsCaraousel from '../components/EventsCaraousel';
 import Contact from '../components/Contact';
 import GroupImg from '../components/GroupImg';
+import JoinSteps from '../components/JoinSteps';
+import Benefits from '../components/Benefits';
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Preloader from '../components/PreLoader';
@@ -40,6 +42,8 @@ function Home() {
           transition={{ duration: 0.5 }}
         >
           <Hero/>
+          <JoinSteps/>
+          <Benefits/>
           <Sponsors/>
           <EventsCaraousel/>
           <Contact/>
