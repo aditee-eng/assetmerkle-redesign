@@ -12,7 +12,7 @@ const JoinSteps = () => (
   <section className="relative w-full px-6 py-24 text-white">
     <div className="mx-auto max-w-6xl">
       <motion.h2
-        className="max-w-3xl text-5xl font-black leading-[1.05] tracking-tight md:text-7xl"
+        className="max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-normal md:text-7xl"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -33,14 +33,14 @@ const JoinSteps = () => (
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: i * 0.08 }}
           >
-            <span className="text-7xl font-black leading-none tracking-tighter text-transparent transition-colors duration-500 [-webkit-text-stroke:2px_rgba(245,197,24,.7)] group-hover:text-amber-400 md:text-8xl">
+            <span className="text-7xl font-extrabold leading-none tracking-normaler text-transparent transition-colors duration-500 [-webkit-text-stroke:2px_rgba(167,139,250,.7)] group-hover:text-violet-400 md:text-8xl">
               {n}
             </span>
             <div>
               <h3 className="text-2xl font-extrabold md:text-3xl">{title}</h3>
               <p className="mt-2 max-w-xl text-slate-400">{text}</p>
             </div>
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/60 px-6 py-3 text-sm font-bold text-amber-300 transition-colors duration-300 group-hover:bg-amber-400 group-hover:text-slate-950">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-violet-400/60 px-6 py-3 text-sm font-bold text-violet-300 transition-colors duration-300 group-hover:bg-violet-400 group-hover:text-white">
               {cta}
               <ArrowUpRight className="h-4 w-4" />
             </span>

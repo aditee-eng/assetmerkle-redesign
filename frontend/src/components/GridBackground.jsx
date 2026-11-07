@@ -10,9 +10,9 @@ const GridBackground = () => {
     let animationFrameId;
 
     // --- Configuration ---
-    const gridColor = 'rgba(255, 198, 64, 0.05)'; // Grid is now much more subtle
-    const particleColor = 'rgba(255, 198, 64, 0.8)'; // Brighter gold for the particles
-    const lineColor = 'rgba(255, 198, 64, 1)';   // Base color for connection lines
+    const gridColor = 'rgba(139, 92, 246, 0.05)'; // Grid is now much more subtle
+    const particleColor = 'rgba(139, 92, 246, 0.8)'; // Brighter gold for the particles
+    const lineColor = 'rgba(139, 92, 246, 1)';   // Base color for connection lines
     const particleRadius = 1.5;
     const particleCount = 80; // Slightly fewer particles looks better with connections
     const particleSpeed = 0.3;
@@ -64,7 +64,7 @@ const GridBackground = () => {
           if (distance < connectionDistance) {
             const opacity = 1 - (distance / connectionDistance);
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 198, 64, ${opacity * 0.5})`; // Line opacity based on distance
+            ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.5})`; // Line opacity based on distance
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);

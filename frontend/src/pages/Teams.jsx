@@ -155,18 +155,18 @@ const TeamMemberCard = ({ member }) => {
   return (
     <div
       ref={cardRef}
-      className="group relative w-full max-w-xs rounded-2xl border border-white/10 bg-white/[0.01] hover:bg-white/[0.03] p-6 text-center shadow-lg backdrop-blur-sm transition-all duration-300 ease-out [transform-style:preserve-3d] hover:border-amber-500/30 spotlight-card"
+      className="group relative w-full max-w-xs rounded-2xl border border-white/10 bg-white/[0.01] hover:bg-white/[0.03] p-6 text-center shadow-lg backdrop-blur-sm transition-all duration-300 ease-out [transform-style:preserve-3d] hover:border-violet-500/30 spotlight-card"
       style={style}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative [transform-style:preserve-3d]">
-        <div className="mx-auto h-32 w-32 rounded-full border-2 border-white/10 overflow-hidden shadow-md transition-all duration-300 group-hover:border-amber-400 [transform:translateZ(40px)]">
+        <div className="mx-auto h-32 w-32 rounded-full bg-gradient-to-br from-violet-500 via-indigo-500 to-blue-500 p-[3px] shadow-lg shadow-violet-500/20 transition-all duration-300 group-hover:shadow-violet-500/40 [transform:translateZ(40px)]">
           <img
             src={member.imageUrl}
             alt={`Profile of ${member.name}`}
-            className="h-full w-full object-cover transition-all duration-300"
+            className="h-full w-full rounded-full object-cover transition-all duration-300"
             style={{
               ...member.imageStyle,
               transform: isHovered
@@ -178,21 +178,21 @@ const TeamMemberCard = ({ member }) => {
           />
         </div>
       </div>
-      <h3 className="font-display mt-5 text-xl font-bold text-white [transform:translateZ(30px)] group-hover:text-amber-300 transition-colors duration-300">{member.name}</h3>
-      <p className="mt-1 text-sm font-medium text-amber-400/80 [transform:translateZ(20px)]">{member.position}</p>
+      <h3 className="font-sans mt-5 text-xl font-bold text-white [transform:translateZ(30px)] group-hover:text-violet-300 transition-colors duration-300">{member.name}</h3>
+      <p className="mt-1 text-sm font-medium text-violet-400/80 [transform:translateZ(20px)]">{member.position}</p>
       <div className="mt-5 flex items-center justify-center gap-4 opacity-75 transition-opacity duration-300 group-hover:opacity-100 [transform:translateZ(20px)]">
         {member.socials.linkedin && member.socials.linkedin !== '#' && (
-          <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/30 hover:bg-white/10 transition-all duration-300">
+          <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/30 hover:bg-white/10 transition-all duration-300">
             <Linkedin size={15} />
           </a>
         )}
         {member.socials.twitter && member.socials.twitter !== '#' && (
-          <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/30 hover:bg-white/10 transition-all duration-300">
+          <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/30 hover:bg-white/10 transition-all duration-300">
             <Twitter size={15} />
           </a>
         )}
         {member.socials.instagram && member.socials.instagram !== '#' && (
-          <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/30 hover:bg-white/10 transition-all duration-300">
+          <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/30 hover:bg-white/10 transition-all duration-300">
             <Instagram size={15} />
           </a>
         )}
@@ -236,8 +236,8 @@ export default function Teams() {
       <BackgroundPattern />
       <div className="relative z-10 container mx-auto px-4 py-24 sm:py-28 mt-12">
         <div className="text-center mb-16">
-          <h1 className="font-sans text-4xl md:text-5xl font-black mt-20 tracking-tight text-white">
-            Meet the <span className="font-serif italic font-normal text-amber-400">Team</span>
+          <h1 className="font-sans text-5xl md:text-6xl font-extrabold mt-20 tracking-normal bg-gradient-to-b from-white to-slate-400 bg-clip-text text-transparent">
+            Meet the team
           </h1>
           <p className="mt-4 text-base text-slate-400 max-w-xl mx-auto font-light leading-relaxed">
             The passionate individuals driving our vision forward.
@@ -251,9 +251,9 @@ export default function Teams() {
               <button
                 key={team}
                 onClick={() => setActiveTab(team)}
-                className={`flex-shrink-0 px-5 py-2 text-xs font-display font-bold uppercase tracking-wider rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                className={`flex-shrink-0 px-5 py-2 text-sm font-sans font-bold rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer ${
                   activeTab === team
-                    ? 'text-slate-950 bg-amber-400 shadow-md shadow-amber-500/10'
+                    ? 'text-white bg-gradient-to-r from-violet-500 to-blue-500 shadow-md shadow-violet-500/20'
                     : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -275,6 +275,12 @@ export default function Teams() {
               </div>
             </section>
           ))}
+        </div>
+
+        <div className="mt-24 mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white">Want to join the team?</h2>
+          <p className="mt-2 text-slate-400">Join our community to hear about events and opportunities first.</p>
+          <a href="https://chat.whatsapp.com/KUvfa2sCnYO8Z8GZ1llj2H" target="_blank" rel="noopener noreferrer" className="mt-6 inline-block rounded-full border border-violet-400/60 px-6 py-2.5 text-sm font-bold text-violet-300 transition-colors duration-300 hover:bg-violet-500 hover:text-white">Join the community</a>
         </div>
       </div>
     </div>

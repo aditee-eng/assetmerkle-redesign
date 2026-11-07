@@ -121,13 +121,13 @@ const AMHacks = () => {
 
               <motion.div variants={childVariants}>
                 <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight mb-6 mt-12">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-br from-yellow-300 via-amber-400 to-orange-500">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-br from-blue-300 via-violet-400 to-orange-500">
                     AM VibeAthon
                   </span>
                 </h1>
 
                 {/* Decorative Line */}
-                <div className="h-2 w-32 bg-gradient-to-r from-yellow-400 to-amber-500 mx-auto rounded-full mb-8" />
+                <div className="h-2 w-32 bg-gradient-to-r from-blue-400 to-violet-500 mx-auto rounded-full mb-8" />
               </motion.div>
 
               {/* ================================
@@ -155,7 +155,7 @@ const AMHacks = () => {
               >
                 <div className="flex items-center gap-2 bg-slate-900/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-slate-800">
                   <Calendar
-                    className="text-yellow-400"
+                    className="text-blue-400"
                     size={20}
                   />
                   <span className="text-slate-300">
@@ -165,7 +165,7 @@ const AMHacks = () => {
 
                 <div className="flex items-center gap-2 bg-slate-900/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-slate-800">
                   <Clock
-                    className="text-yellow-400"
+                    className="text-blue-400"
                     size={20}
                   />
                   <span className="text-slate-300">
@@ -175,7 +175,7 @@ const AMHacks = () => {
 
                 <div className="flex items-center gap-2 bg-slate-900/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-slate-800">
                   <MapPin
-                    className="text-yellow-400"
+                    className="text-blue-400"
                     size={20}
                   />
                   <span className="text-slate-300">
@@ -185,7 +185,7 @@ const AMHacks = () => {
 
                 <div className="flex items-center gap-2 bg-slate-900/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-slate-800">
                   <Users
-                    className="text-yellow-400"
+                    className="text-blue-400"
                     size={20}
                   />
                   <span className="text-slate-300">
@@ -215,7 +215,7 @@ const AMHacks = () => {
                         key={unit}
                         className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-xl p-4 min-w-[80px]"
                       >
-                        <div className="text-3xl font-bold text-yellow-400">
+                        <div className="text-3xl font-bold text-blue-400">
                           {value
                             .toString()
                             .padStart(2, "0")}
@@ -242,7 +242,7 @@ const AMHacks = () => {
                 {/* Register Now */}
                 <Link to="/register">
                   <motion.span
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-400 to-amber-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-amber-400 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center justify-center bg-gradient-to-r from-blue-400 to-violet-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-300 hover:to-violet-400 transition-all duration-300 shadow-lg hover:shadow-xl"
                     whileHover={{
                       scale: 1.05,
                     }}
@@ -257,7 +257,7 @@ const AMHacks = () => {
                 {/* Submit Project */}
                 <Link to="/submit">
                   <motion.span
-                    className="inline-flex items-center justify-center border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300"
+                    className="inline-flex items-center justify-center border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
                     whileHover={{
                       scale: 1.05,
                     }}

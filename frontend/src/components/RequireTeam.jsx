@@ -36,7 +36,7 @@ const RequireTeam = ({ children }) => {
   if (authLoading || status === "checking") {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black">
-        <div className="w-8 h-8 border-2 border-yellow-500/30 border-t-yellow-400 rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-blue-500/30 border-t-blue-400 rounded-full animate-spin" />
       </div>
     );
   }

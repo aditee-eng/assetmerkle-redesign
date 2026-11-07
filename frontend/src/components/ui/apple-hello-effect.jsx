@@ -161,7 +161,7 @@ function AppleHelloVietnameseEffect({
 
       {/* sign */}
       <motion.path
-        className="stroke-yellow-400"
+        className="stroke-blue-400"
         d="M763.027 19.3039C768.734 34.6886 780.397 48.3362 792.059 55.5322"
         style={{ strokeLinecap: "round" }}
         initial={initialProps}
@@ -244,15 +244,15 @@ function AMVibeathonEffect({ className, speed = 1, ...props }) {
           @keyframes draw {
             0% {
               stroke-dashoffset: 1200;
-              fill: rgba(251, 191, 36, 0);
+              fill: rgba(167, 139, 250, 0);
             }
             70% {
               stroke-dashoffset: 0;
-              fill: rgba(251, 191, 36, 0);
+              fill: rgba(167, 139, 250, 0);
             }
             100% {
               stroke-dashoffset: 0;
-              fill: rgba(251, 191, 36, 1);
+              fill: rgba(167, 139, 250, 1);
             }
           }
           .cursive-vibeathon {
@@ -269,7 +269,7 @@ function AMVibeathonEffect({ className, speed = 1, ...props }) {
           textAnchor="middle"
           fontSize="76"
           fill="none"
-          stroke="#fbbf24"
+          stroke="#a78bfa"
           strokeWidth="1.8"
           className="cursive-vibeathon select-none"
         >

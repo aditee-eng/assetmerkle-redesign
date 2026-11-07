@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './EventsCSS.css'
+import EventsCoverflow from '../components/EventsCoverflow';
 
 // Css for bg in EventsCSS.css
 export default function Events() {
@@ -30,13 +31,13 @@ const HeroSection = () => {
     return (
         <div className="text-center w-full md:w-4/5 flex items-center flex-col justify-center mx-auto pt-20 pb-10">
             <h1 className={`text-3xl sm:text-5xl lg:text-6xl text-center font-extrabold text-white leading-tight transition-all duration-700 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-                We host robust <span className="text-yellow-400">events</span> that help leverage the web3 infrastructure.
+                We host robust <span className="text-blue-400">events</span> that help leverage the web3 infrastructure.
             </h1>
             <p className={`mt-6 max-w-2xl mx-auto text-lg text-gray-300 transition-all duration-700 delay-200 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                 WE STRIVE TO CREATE A COMMUNITY OF STUDENTS PASSIONATE ABOUT BLOCKCHAIN AND WEB3 TECHNOLOGY
             </p>
             <div className={`mt-10 transition-all duration-700 delay-400 ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-                <a href="/collaborate" className="inline-block bg-yellow-500 text-gray-900 font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-yellow-400 transform hover:-translate-y-1 transition-all duration-300">
+                <a href="/collaborate" className="inline-block bg-blue-500 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-blue-400 transform hover:-translate-y-1 transition-all duration-300">
                     🤝 Collaborate with us
                 </a>
             </div>
@@ -95,7 +96,7 @@ const TimelineItem = ({ event, index }) => {
                   />
                   {/* Text content on the right */}
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-yellow-400">{event.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-blue-400">{event.title}</h3>
                     {event.subtitle && <p className="text-xs sm:text-sm text-gray-400 mt-1 font-semibold">{event.subtitle}</p>}
                     <p className="text-sm sm:text-base text-gray-300 leading-relaxed mt-2">{event.description}</p>
                   </div>
@@ -110,13 +111,13 @@ const TimelineItem = ({ event, index }) => {
             <div className={`hidden lg:flex justify-between items-center w-full ${isRight ? 'flex-row-reverse' : ''}`}>
                 {/* The Card */}
                 <div className={`w-5/12 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${isRight ? 'translate-x-20' : '-translate-x-20'}`}`}>
-                    <div className="p-4 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 hover:border-yellow-500">
+                    <div className="p-4 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 hover:border-blue-500">
                         {cardComponent}
                     </div>
                 </div>
                 {/* The Center Dot */}
                 <div className="relative w-2/12 flex justify-center">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full shadow-lg z-10"></div>
+                    <div className="w-6 h-6 bg-blue-500 rounded-full shadow-lg z-10"></div>
                 </div>
                 {/* The Date */}
                 <div className={`w-5/12 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-x-0' : `opacity-0 ${isRight ? '-translate-x-20' : 'translate-x-20'}`}`}>
@@ -127,13 +128,13 @@ const TimelineItem = ({ event, index }) => {
             {/* --- Mobile Layout (hidden on lg screens and up) --- */}
             <div className="lg:hidden flex">
                 <div className="flex flex-col items-center mr-4">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full shadow-lg z-10 flex-shrink-0"></div>
+                    <div className="w-6 h-6 bg-blue-500 rounded-full shadow-lg z-10 flex-shrink-0"></div>
                     <div className="w-1 mt-2 flex-grow bg-gray-600"></div>
                 </div>
                 {/* UPDATED: Increased slide distance for a more noticeable effect from the left */}
                 <div className={`w-full transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                    <p className="font-bold text-lg mb-2 text-yellow-400">{event.date}</p>
-                    <div className="p-4 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 hover:border-yellow-500">
+                    <p className="font-bold text-lg mb-2 text-blue-400">{event.date}</p>
+                    <div className="p-4 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 hover:border-blue-500">
                         {cardComponent}
                     </div>
                 </div>
@@ -351,13 +352,16 @@ const Timeline = () => {
 
     ];
 
-    return (
-        <div className="relative mt-20">
-            {/* The main vertical line for the DESKTOP timeline */}
-            <div className="hidden lg:block absolute top-0 left-1/2 w-1 h-full bg-gray-600 transform -translate-x-1/2"></div>
-            {events.map((event, index) => (
-                <TimelineItem key={index} event={event} index={index} />
-            ))}
-        </div>
-    );
+    // Oldest first so the timeline reads left (past) to right (present).
+    const items = [...events].reverse().map((e, i) => ({
+        id: i,
+        title: e.title,
+        image: e.imageUrl,
+        date: e.date,
+        subtitle: e.subtitle,
+        description: e.description,
+        href: e.link,
+    }));
+
+    return <EventsCoverflow items={items} />;
 };

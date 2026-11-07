@@ -5,7 +5,7 @@ const Card = ({ imageSrc, title, description, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="cursor-pointer bg-black border border-yellow-400 rounded-2xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-yellow-500/50 w-[400px]"
+      className="cursor-pointer bg-black border border-blue-400 rounded-2xl shadow-lg p-6 flex flex-col items-center transition-transform duration-300 transform hover:scale-105 hover:shadow-blue-500/50 w-[400px]"
     >
       <img
         src={imageSrc}

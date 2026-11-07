@@ -4,11 +4,11 @@ import { Presentation, Trophy, BookOpen, Rocket, Users, Handshake } from "lucide
 
 const items = [
   { title: "Workshops and talks", text: "Hands-on sessions on wallets, Layer 2, Starknet and more, led by people in the field.", Icon: Presentation, g: "from-indigo-500 to-violet-700" },
-  { title: "National hackathons", text: "Build in a team at AM Hacks, our annual flagship Web3 hackathon.", Icon: Trophy, g: "from-amber-400 to-orange-600" },
-  { title: "Learning docs", text: "Guides for Solidity, Rust and dApps that take you from beginner to expert.", Icon: BookOpen, g: "from-fuchsia-500 to-pink-600" },
-  { title: "Real-world projects", text: "Design and ship next-gen dApps with other students, not just tutorials.", Icon: Rocket, g: "from-teal-400 to-cyan-600" },
-  { title: "A builder community", text: "A student-led space at IGDTUW where you can ask, share and grow with peers.", Icon: Users, g: "from-rose-400 to-red-600" },
-  { title: "Industry support", text: "Backed by sponsors and partners from across the Web3 ecosystem.", Icon: Handshake, g: "from-emerald-400 to-green-600" },
+  { title: "National hackathons", text: "Build in a team at AM Hacks, our annual flagship Web3 hackathon.", Icon: Trophy, g: "from-sky-400 to-blue-600" },
+  { title: "Learning docs", text: "Guides for Solidity, Rust and dApps that take you from beginner to expert.", Icon: BookOpen, g: "from-fuchsia-500 to-purple-700" },
+  { title: "Real-world projects", text: "Design and ship next-gen dApps with other students, not just tutorials.", Icon: Rocket, g: "from-cyan-400 to-blue-600" },
+  { title: "A builder community", text: "A student-led space at IGDTUW where you can ask, share and grow with peers.", Icon: Users, g: "from-violet-400 to-indigo-600" },
+  { title: "Industry support", text: "Backed by sponsors and partners from across the Web3 ecosystem.", Icon: Handshake, g: "from-blue-400 to-violet-600" },
 ];
 
 const Benefits = () => (
@@ -21,7 +21,7 @@ const Benefits = () => (
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-5xl font-black tracking-tight md:text-6xl">What you get as a member</h2>
+        <h2 className="text-5xl font-extrabold tracking-normal md:text-6xl">What you get as a member</h2>
         <p className="mt-4 text-lg text-slate-400">Everything the society offers to help you learn Web3 and build with it.</p>
       </motion.div>
 

@@ -52,7 +52,7 @@ const GlassCursor = () => {
       }}
     >
       {/* Tiny solid gold dot in the center */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-amber-400 rounded-full shadow-[0_0_4px_#fbbf24]"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-violet-400 rounded-full shadow-[0_0_4px_#a78bfa]"></div>
     </motion.div>
   );
 };

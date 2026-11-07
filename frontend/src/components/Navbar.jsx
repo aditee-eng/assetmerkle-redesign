@@ -115,7 +115,7 @@ const Navbar = () => {
                     <Link
                       key={item.label}
                       to={item.path}
-                      className={`font-sans text-sm font-medium transition-colors py-1 ${isActive ? 'text-amber-400 font-extrabold' : 'text-slate-300 hover:text-white'
+                      className={`font-sans text-sm font-medium transition-colors py-1 ${isActive ? 'text-violet-400 font-extrabold' : 'text-slate-300 hover:text-white'
                         }`}
                       onClick={() => setIsMenuOpen(false)}
                     >

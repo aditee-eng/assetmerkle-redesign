@@ -54,7 +54,7 @@ const AMSponsi = () => {
                       className="max-w-full max-h-16 object-contain mb-4"
                     />
                   ) : (
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-violet-500 rounded-lg flex items-center justify-center mb-4">
                       <span className="text-black font-bold text-xs">{sponsor.name.slice(0,3).toUpperCase()}</span>
                     </div>
                   )}

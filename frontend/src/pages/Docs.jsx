@@ -167,13 +167,13 @@ const resources = {
 
 // --- SVG Icon Components ---
 const BookIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline-block text-yellow-500/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline-block text-blue-500/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
   </svg>
 );
 
 const PlayIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline-block text-yellow-500/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 inline-block text-blue-500/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
     <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
@@ -220,7 +220,7 @@ const AnimatedBackground = () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(250, 204, 21, 0.6)';
+        ctx.fillStyle = 'rgba(96, 165, 250, 0.6)';
         ctx.fill();
       }
     }
@@ -246,7 +246,7 @@ const AnimatedBackground = () => {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(250, 204, 21, ${1 - dist / 100})`;
+            ctx.strokeStyle = `rgba(96, 165, 250, ${1 - dist / 100})`;
             ctx.stroke();
           }
         }
@@ -308,9 +308,9 @@ const ResourceCard = ({ title, description, link, type }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col bg-white/[0.02] backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-lg hover:border-amber-500/40 hover:bg-white/[0.04] transition-all duration-300 group spotlight-card"
+      className="flex flex-col bg-white/[0.02] backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-lg hover:border-violet-500/40 hover:bg-white/[0.04] transition-all duration-300 group spotlight-card"
     >
-      <h3 className="font-display text-base font-bold text-slate-100 mb-3 break-words group-hover:text-amber-300 transition-colors flex items-center gap-2.5 [transform:translateZ(20px)]">
+      <h3 className="font-display text-base font-bold text-slate-100 mb-3 break-words group-hover:text-violet-300 transition-colors flex items-center gap-2.5 [transform:translateZ(20px)]">
         {type === 'blog' ? <BookIcon /> : <PlayIcon />}
         <span className="flex-1">{title}</span>
       </h3>
@@ -330,7 +330,7 @@ export default function Docs() {
       onClick={() => setActiveTab(id)}
       className={`px-5 py-2 text-xs font-display font-bold uppercase tracking-wider rounded-full transition-all duration-300 relative cursor-pointer ${
         activeTab === id
-          ? 'text-slate-950 bg-amber-400 shadow-md shadow-amber-500/10'
+          ? 'text-slate-950 bg-violet-400 shadow-md shadow-violet-500/10'
           : 'text-slate-400 hover:text-white hover:bg-white/5'
       }`}
     >
@@ -344,7 +344,7 @@ export default function Docs() {
       <main className="relative z-10 container mx-auto px-4 py-16 md:py-24 mt-28 md:mt-32">
         <header className="text-center mb-16">
           <h1 className="font-sans text-3xl md:text-5xl font-black mb-4 mt-20 text-white tracking-tight">
-            Web3 Learning <span className="font-serif italic font-normal text-amber-400">Docs</span>
+            Web3 Learning <span className="font-serif italic font-normal text-violet-400">Docs</span>
           </h1>
           <p className="text-sm md:text-base text-slate-400 max-w-xl mx-auto font-light leading-relaxed">
             Your curated guide to mastering the decentralized web. Select your experience level to begin.

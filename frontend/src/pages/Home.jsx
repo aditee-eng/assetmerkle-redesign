@@ -11,9 +11,23 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Preloader from '../components/PreLoader';
 
 function Home() {
-  const [loading, setLoading] = useState(true);
+  // Show the preloader only on the first visit of a session, not on every
+  // navigation back to the home page (e.g. clicking "About").
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem('am-preloader-seen');
+    } catch {
+      return true;
+    }
+  });
 
   useEffect(() => {
+    if (!loading) return;
+    try {
+      sessionStorage.setItem('am-preloader-seen', '1');
+    } catch {
+      /* storage unavailable: the preloader just plays once per page load */
+    }
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000); // 3 seconds

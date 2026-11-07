@@ -635,7 +635,7 @@ const Registration = () => {
                     onClick={() => navigate("/submit")}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-3.5 px-5 rounded-xl font-bold text-base text-black bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 transition-all shadow-lg shadow-yellow-500/20 flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 px-5 rounded-xl font-bold text-base text-white bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <span className="text-lg">🚀</span>
                     {hasSubmitted ? "View / Edit Submission" : "Continue to Submission"}
@@ -647,7 +647,7 @@ const Registration = () => {
                     disabled
                     className="w-full py-3.5 px-5 rounded-xl font-bold text-base text-gray-400 bg-gray-600/60 border border-gray-500/40 cursor-not-allowed shadow-inner transition-all flex items-center justify-center gap-2"
                   >
-                    <span className="w-2 h-2 rounded-full bg-amber-500" />
+                    <span className="w-2 h-2 rounded-full bg-violet-500" />
                     Need at least 2 members to submit
                   </button>
                 )}
@@ -663,15 +663,15 @@ const Registration = () => {
             </div>
 
             {/* Box 2: Round 2 Announcement Box */}
-            <div className="bg-gradient-to-br from-amber-500/15 via-pink-500/10 to-purple-500/15 border border-amber-500/30 rounded-2xl p-5 text-left backdrop-blur-md shadow-xl flex flex-col justify-between space-y-3">
+            <div className="bg-gradient-to-br from-violet-500/15 via-pink-500/10 to-purple-500/15 border border-violet-500/30 rounded-2xl p-5 text-left backdrop-blur-md shadow-xl flex flex-col justify-between space-y-3">
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-amber-400 font-extrabold text-sm tracking-wide">
+                <div className="flex items-center gap-2 text-violet-400 font-extrabold text-sm tracking-wide">
                   🔥 Round 2 Is Live!
                 </div>
                 <p className="text-xs text-gray-200 leading-relaxed font-normal">
                   The twist is officially here! Read the challenge carefully, build your solution, and submit your project before the deadline.
                 </p>
-                <div className="text-xs text-amber-300 font-semibold bg-amber-500/15 border border-amber-500/30 rounded-xl p-2.5">
+                <div className="text-xs text-violet-300 font-semibold bg-violet-500/15 border border-violet-500/30 rounded-xl p-2.5">
                   ⏰ <strong>DEADLINE: 16 SEPTEMBER, 11:30 AM</strong>
                 </div>
                 <p className="text-[11px] text-gray-300 leading-normal">

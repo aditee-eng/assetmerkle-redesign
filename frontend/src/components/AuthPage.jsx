@@ -19,24 +19,24 @@ const AuthPage = () => {
 
   const InputField = ({ icon: Icon, ...props }) => (
     <motion.div variants={itemVariants} className="relative w-full">
-      <div className="absolute top-1/2 left-4 -translate-y-1/2 text-yellow-400/50 pointer-events-none">
+      <div className="absolute top-1/2 left-4 -translate-y-1/2 text-blue-400/50 pointer-events-none">
         <Icon size={20} />
       </div>
       <input
         {...props}
-        className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all duration-300"
+        className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
       />
     </motion.div>
   );
 
   const SelectField = ({ icon: Icon, ...props }) => (
     <motion.div variants={itemVariants} className="relative w-full">
-        <div className="absolute top-1/2 left-4 -translate-y-1/2 text-yellow-400/50 pointer-events-none">
+        <div className="absolute top-1/2 left-4 -translate-y-1/2 text-blue-400/50 pointer-events-none">
             <Icon size={20} />
         </div>
         <select
             {...props}
-            className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all duration-300 appearance-none"
+            className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300 appearance-none"
         >
             <option value="" disabled>Web3 Experience Level</option>
             <option value="beginner">Beginner</option>
@@ -51,14 +51,14 @@ const AuthPage = () => {
       <GridBackground />
 
       <motion.div
-        className="relative z-10 w-full max-w-md bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-yellow-900/10"
+        className="relative z-10 w-full max-w-md bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-blue-900/10"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <div className="p-8 md:p-10">
           <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-amber-500">
+            <h1 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-violet-500">
               {isLoginView ? 'Welcome Back' : 'Create Account'}
             </h1>
             <p className="text-gray-400 mt-2">
@@ -94,7 +94,7 @@ const AuthPage = () => {
               <motion.button
                 variants={itemVariants}
                 type="submit"
-                className="w-full py-3 px-6 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-lg font-semibold text-lg text-black hover:scale-105 active:scale-100 transition-transform duration-300 shadow-lg shadow-yellow-500/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-yellow-400"
+                className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-violet-600 rounded-lg font-semibold text-lg text-white hover:scale-105 active:scale-100 transition-transform duration-300 shadow-lg shadow-blue-500/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-400"
               >
                 {isLoginView ? 'Login' : 'Sign Up'}
               </motion.button>
@@ -104,7 +104,7 @@ const AuthPage = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setIsLoginView(!isLoginView)}
-              className="text-sm text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+              className="text-sm text-gray-400 hover:text-blue-400 transition-colors duration-300"
             >
               {isLoginView
                 ? "Don't have an account? Sign Up"
