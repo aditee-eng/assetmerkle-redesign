@@ -154,7 +154,7 @@ body {
   font-weight: 800;
   text-align: center;
   color: #FFB627;
-  text-shadow: 0 0 12px rgba(255, 182, 39, 0.7);
+  text-shadow: 0 0 12px rgba(139, 92, 246, 0.7);
   animation: deadlinePulse 1.5s ease-in-out infinite;
   letter-spacing: 0.5px;
 }

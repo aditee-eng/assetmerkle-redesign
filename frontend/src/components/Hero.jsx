@@ -22,32 +22,16 @@ const Shape = ({ type }) => {
 
 const cards = [
   { title: "Events", tag: "Workshops", to: "/events", Icon: CalendarDays, shape: "ring", bg: "from-indigo-500 via-violet-600 to-purple-800", glow: "rgba(124,92,255,.55)", rot: -14, y: 60, hide: true },
-  { title: "AM Hacks 2.0", tag: "Hackathon", to: "/amhacks", Icon: Trophy, shape: "hex", bg: "from-amber-300 via-orange-500 to-rose-600", glow: "rgba(251,146,60,.55)", rot: -7, y: 22 },
-  { title: "Meet the builders", tag: "Community", to: "/team", Icon: Users, shape: "orb", bg: "from-teal-300 via-cyan-500 to-blue-700", glow: "rgba(34,211,238,.55)", rot: 0, y: 0, center: true },
-  { title: "Web3 docs", tag: "Learn", to: "/docs", Icon: BookOpen, shape: "diamond", bg: "from-fuchsia-400 via-pink-500 to-rose-700", glow: "rgba(236,72,153,.5)", rot: 7, y: 22 },
-  { title: "Partner with us", tag: "Collaborate", to: "/collaborate", Icon: Handshake, shape: "venn", bg: "from-lime-300 via-emerald-500 to-teal-700", glow: "rgba(52,211,153,.5)", rot: 14, y: 60, hide: true },
-];
-
-const chips = [
-  { label: "Builder", cls: "left-[8%] top-[34%] bg-teal-400/90 text-slate-950", d: 0 },
-  { label: "Hackathon team", cls: "right-[8%] top-[46%] bg-rose-400/90 text-slate-950", d: 1.2 },
+  { title: "AM Hacks 2.0", tag: "Hackathon", to: "/amhacks", Icon: Trophy, shape: "hex", bg: "from-sky-300 via-blue-500 to-indigo-700", glow: "rgba(59,130,246,.55)", rot: -7, y: 22 },
+  { title: "Meet the builders", tag: "Community", to: "/team", Icon: Users, shape: "orb", bg: "from-violet-300 via-purple-500 to-indigo-700", glow: "rgba(139,92,246,.55)", rot: 0, y: 0, center: true },
+  { title: "Web3 docs", tag: "Learn", to: "/docs", Icon: BookOpen, shape: "diamond", bg: "from-fuchsia-400 via-purple-500 to-violet-700", glow: "rgba(192,132,252,.5)", rot: 7, y: 22 },
+  { title: "Partner with us", tag: "Collaborate", to: "/collaborate", Icon: Handshake, shape: "venn", bg: "from-cyan-300 via-blue-500 to-indigo-600", glow: "rgba(34,211,238,.45)", rot: 14, y: 60, hide: true },
 ];
 
 const Hero = () => (
-  <section className="relative flex min-h-[100svh] w-full flex-col items-center overflow-hidden px-6 pt-40 text-white">
-    {chips.map((c) => (
-      <motion.span
-        key={c.label}
-        className={`absolute hidden rounded-full px-4 py-1.5 text-sm font-bold shadow-lg lg:block ${c.cls}`}
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: c.d }}
-      >
-        {c.label}
-      </motion.span>
-    ))}
-
+  <section className="font-sans relative flex min-h-[100svh] w-full flex-col items-center overflow-hidden px-6 pt-40 text-white">
     <motion.h1
-      className="max-w-4xl bg-gradient-to-b from-white to-slate-400 bg-clip-text text-center text-5xl font-black leading-[1.08] tracking-tight text-transparent md:text-7xl"
+      className="max-w-4xl bg-gradient-to-b from-white to-slate-400 bg-clip-text text-center text-5xl font-extrabold leading-[1.08] tracking-tight text-transparent md:text-7xl"
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -70,7 +54,7 @@ const Hero = () => (
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.4 }}
     >
-      <Link to="/login" className="rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 px-7 py-3 text-sm font-bold text-slate-950 transition-transform duration-300 hover:scale-105">
+      <Link to="/login" className="rounded-full bg-gradient-to-r from-violet-500 to-blue-400 px-7 py-3 text-sm font-bold text-white transition-transform duration-300 hover:scale-105">
         Log in or sign up
       </Link>
       <a href="https://chat.whatsapp.com/KUvfa2sCnYO8Z8GZ1llj2H" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 bg-white/5 px-7 py-3 text-sm font-bold text-slate-100 transition-all duration-300 hover:border-white/30 hover:bg-white/10">

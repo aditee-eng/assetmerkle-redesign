@@ -33,7 +33,7 @@ const THEMES = [
     primary: "#FEF08A",
     secondary: "#FBBF24",
     accent: "#D97706",
-    glow: "rgba(245, 158, 11, 0.6)",
+    glow: "rgba(99, 102, 241, 0.6)",
     gradient: "linear-gradient(135deg, #FEF08A 0%, #FBBF24 50%, #D97706 100%)",
   },
   {

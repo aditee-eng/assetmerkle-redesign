@@ -193,7 +193,7 @@ const EventCard = ({ card }) => {
         transformStyle: 'preserve-3d',
         transition: 'transform 0.15s ease-out',
       }}
-      className="group h-full bg-white/[0.05] backdrop-blur-xl rounded-2xl p-6 border border-white/10 flex flex-col text-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:border-amber-400/30 transition-colors duration-500 spotlight-card"
+      className="group h-full bg-white/[0.05] backdrop-blur-xl rounded-2xl p-6 border border-white/10 flex flex-col text-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:border-violet-400/30 transition-colors duration-500 spotlight-card"
     >
       <div className="mb-6 overflow-hidden rounded-xl border border-white/5 bg-black/40 h-48 flex items-center justify-center [transform:translateZ(20px)]">
         <img
@@ -203,7 +203,7 @@ const EventCard = ({ card }) => {
         />
       </div>
 
-      <h4 className="font-display text-lg font-bold mb-3 text-white group-hover:text-amber-300 transition-colors duration-300 [transform:translateZ(30px)]">
+      <h4 className="font-display text-lg font-bold mb-3 text-white group-hover:text-violet-300 transition-colors duration-300 [transform:translateZ(30px)]">
         {card.title}
       </h4>
       <p className="text-slate-400 text-sm flex-grow leading-relaxed font-light [transform:translateZ(10px)]">
@@ -213,7 +213,7 @@ const EventCard = ({ card }) => {
       <div className="mt-6 [transform:translateZ(15px)]">
         <Link
           to={card.readMoreLink}
-          className="inline-block bg-gradient-to-r from-amber-500/10 to-yellow-500/5 border border-amber-500/20 text-amber-300 font-display text-xs font-bold tracking-wider px-5 py-2.5 rounded-full hover:bg-amber-500/25 hover:border-amber-400/50 transition-all duration-300"
+          className="inline-block bg-gradient-to-r from-violet-500/10 to-blue-500/5 border border-violet-500/20 text-violet-300 font-display text-xs font-bold tracking-wider px-5 py-2.5 rounded-full hover:bg-violet-500/25 hover:border-violet-400/50 transition-all duration-300"
         >
           Read More &rarr;
         </Link>

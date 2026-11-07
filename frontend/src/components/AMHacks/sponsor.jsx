@@ -17,8 +17,8 @@ const themeData = [
 ];
 
 const Card = ({ icon, title, description }) => (
-  <div className="bg-black border-2 border-yellow-400 rounded-2xl p-8 w-full max-w-xl flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,215,0,0.6)]">
-    <div className="text-yellow-400 mb-5 text-6xl">{icon}</div>
+  <div className="bg-black border-2 border-blue-400 rounded-2xl p-8 w-full max-w-xl flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,215,0,0.6)]">
+    <div className="text-blue-400 mb-5 text-6xl">{icon}</div>
     <h3 className="text-2xl font-semibold mb-4">{title}</h3>
     <p className="text-gray-200 text-base leading-relaxed">
       {description}

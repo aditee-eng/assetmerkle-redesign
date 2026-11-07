@@ -4,14 +4,30 @@ import Sponsors from '../components/Sponsors';
 import EventsCaraousel from '../components/EventsCaraousel';
 import Contact from '../components/Contact';
 import GroupImg from '../components/GroupImg';
+import JoinSteps from '../components/JoinSteps';
+import Benefits from '../components/Benefits';
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Preloader from '../components/PreLoader';
 
 function Home() {
-  const [loading, setLoading] = useState(true);
+  // Show the preloader only on the first visit of a session, not on every
+  // navigation back to the home page (e.g. clicking "About").
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem('am-preloader-seen');
+    } catch {
+      return true;
+    }
+  });
 
   useEffect(() => {
+    if (!loading) return;
+    try {
+      sessionStorage.setItem('am-preloader-seen', '1');
+    } catch {
+      /* storage unavailable: the preloader just plays once per page load */
+    }
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000); // 3 seconds
@@ -40,6 +56,8 @@ function Home() {
           transition={{ duration: 0.5 }}
         >
           <Hero/>
+          <JoinSteps/>
+          <Benefits/>
           <Sponsors/>
           <EventsCaraousel/>
           <Contact/>

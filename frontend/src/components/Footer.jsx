@@ -25,8 +25,8 @@ const columnVariants = {
 
 const Footer = () => {
     return (
-        <footer className="relative w-full bg-[#050507]/80 backdrop-blur-xl border-t border-white/5 pt-16 pb-8 px-6 sm:px-8 overflow-hidden z-20">
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div>
+        <footer className="font-sans relative w-full bg-[#050507]/80 backdrop-blur-xl border-t border-white/5 pt-16 pb-8 px-6 sm:px-8 overflow-hidden z-20">
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-violet-500/30 to-transparent"></div>
 
             <motion.div
                 className="container mx-auto max-w-7xl relative z-10"
@@ -35,12 +35,12 @@ const Footer = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <div className="mb-16 flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-amber-400/25 bg-gradient-to-r from-amber-400/15 via-amber-400/5 to-violet-500/15 p-8 md:p-10">
+                <div className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-violet-600/90 via-indigo-600/90 to-blue-600/90 px-6 py-5 ring-1 ring-white/15">
                     <div>
-                        <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">Ready to build with us?</h2>
-                        <p className="mt-2 text-slate-400">Join the community and start building Web3 projects at IGDTUW.</p>
+                        <h2 className="text-xl md:text-2xl font-extrabold tracking-tight text-white">Ready to build with us?</h2>
+                        <p className="mt-1 text-sm text-white/75">Join the community and start building Web3 projects at IGDTUW.</p>
                     </div>
-                    <Link to={'/login'} className="rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 px-7 py-3 text-sm font-bold text-slate-950 transition-transform duration-300 hover:scale-105">Log in or sign up</Link>
+                    <Link to={'/login'} className="rounded-full bg-white px-6 py-2.5 text-sm font-bold text-slate-950 transition-transform duration-300 hover:scale-105">Log in or sign up</Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -48,7 +48,7 @@ const Footer = () => {
                     <motion.div variants={columnVariants} className="flex flex-col">
                         <Link to={'/'} className="flex items-center gap-3 mb-4 group">
                             <img src="/logo.png" className='h-8 w-8 transition-transform duration-300 group-hover:scale-110' alt="Assetmerkle Logo" />
-                            <span className="font-display text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-yellow-300">
+                            <span className="font-sans text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-blue-300">
                                 Assetmerkle
                             </span>
                         </Link>
@@ -56,44 +56,44 @@ const Footer = () => {
                             The first Web3-based community at IGDTUW. Bridging building and blockchain.
                         </p>
                         <div className="flex space-x-3.5">
-                            <a href='https://x.com/AM_igdtuw' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/40 hover:bg-white/10 transition-all duration-300"><FaXTwitter size={16} /></a>
-                            <a href='https://chat.whatsapp.com/Cp0ppTJBmOS4vgDze8XMPq' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/40 hover:bg-white/10 transition-all duration-300"><FaWhatsapp size={16} /></a>
-                            <a href='https://www.linkedin.com/company/assetmerkle-igdtuw/' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/40 hover:bg-white/10 transition-all duration-300"><FaLinkedin size={16} /></a>
-                            <a href='https://www.instagram.com/assetmerkle.igdtuw/' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-amber-400 hover:border-amber-400/40 hover:bg-white/10 transition-all duration-300"><FaInstagram size={16} /></a>
+                            <a href='https://x.com/AM_igdtuw' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/40 hover:bg-white/10 transition-all duration-300"><FaXTwitter size={16} /></a>
+                            <a href='https://chat.whatsapp.com/Cp0ppTJBmOS4vgDze8XMPq' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/40 hover:bg-white/10 transition-all duration-300"><FaWhatsapp size={16} /></a>
+                            <a href='https://www.linkedin.com/company/assetmerkle-igdtuw/' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/40 hover:bg-white/10 transition-all duration-300"><FaLinkedin size={16} /></a>
+                            <a href='https://www.instagram.com/assetmerkle.igdtuw/' target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-violet-400 hover:border-violet-400/40 hover:bg-white/10 transition-all duration-300"><FaInstagram size={16} /></a>
                         </div>
                     </motion.div>
 
                     <motion.div variants={columnVariants}>
-                        <h3 className="font-display text-sm font-semibold mb-5 text-white">Explore</h3>
+                        <h3 className="font-sans text-sm font-semibold mb-5 text-white">Explore</h3>
                         <ul className="space-y-3.5">
-                            <li><Link to={'/'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">About</Link></li>
-                            <li><Link to={'/events'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Events</Link></li>
-                            <li><Link to={'/team'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Team</Link></li>
-                            <li><Link to={'/faq'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">FAQ</Link></li>
-                            <li><Link to={'/docs'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Docs</Link></li>
+                            <li><Link to={'/'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">About</Link></li>
+                            <li><Link to={'/events'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">Events</Link></li>
+                            <li><Link to={'/team'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">Team</Link></li>
+                            <li><Link to={'/faq'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">FAQ</Link></li>
+                            <li><Link to={'/docs'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">Docs</Link></li>
                         </ul>
                     </motion.div>
 
                     <motion.div variants={columnVariants}>
-                        <h3 className="font-display text-sm font-semibold mb-5 text-white">Partner with us</h3>
+                        <h3 className="font-sans text-sm font-semibold mb-5 text-white">Partner with us</h3>
                         <ul className="space-y-3.5">
-                            <li><Link to={'/collaborate'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Collaborate</Link></li>
-                            <li><Link to={'/sponsor'} className="text-slate-400 hover:text-amber-400 transition-colors duration-300 text-sm">Sponsor Us</Link></li>
+                            <li><Link to={'/collaborate'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">Collaborate</Link></li>
+                            <li><Link to={'/sponsor'} className="text-slate-400 hover:text-violet-400 transition-colors duration-300 text-sm">Sponsor Us</Link></li>
                         </ul>
                     </motion.div>
 
                     <motion.div variants={columnVariants}>
-                        <h3 className="font-display text-sm font-semibold mb-5 text-white">Stay in the loop</h3>
-                        <a href="mailto:assetmerkle@gmail.com" className="text-amber-400 hover:text-amber-300 transition-colors duration-300 text-sm font-medium">
+                        <h3 className="font-sans text-sm font-semibold mb-5 text-white">Stay in the loop</h3>
+                        <a href="mailto:assetmerkle@gmail.com" className="text-violet-400 hover:text-violet-300 transition-colors duration-300 text-sm font-medium">
                             assetmerkle@gmail.com
                         </a>
                         <form className="relative flex items-center mt-6">
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-500/40 focus:ring-1 focus:ring-amber-500/40 transition-all duration-300 pr-28"
+                                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500/40 focus:ring-1 focus:ring-violet-500/40 transition-all duration-300 pr-28"
                             />
-                            <button type="submit" className="absolute right-1 top-1 bottom-1 px-4 rounded-md bg-amber-400 text-black text-sm font-bold hover:bg-amber-300 transition-colors duration-300">Subscribe</button>
+                            <button type="submit" className="absolute right-1 top-1 bottom-1 px-4 rounded-md bg-violet-400 text-white text-sm font-bold hover:bg-violet-300 transition-colors duration-300">Subscribe</button>
                         </form>
                     </motion.div>
                 </div>
@@ -103,7 +103,7 @@ const Footer = () => {
                         Assetmerkle © {new Date().getFullYear()} . All rights reserved.
                     </p>
                 </motion.div>
-                <div aria-hidden="true" className="pointer-events-none select-none text-center font-black leading-none tracking-tighter text-white/[0.04] text-[16vw] mt-6 -mb-4">AssetMerkle</div>
+                <div aria-hidden="true" className="pointer-events-none select-none text-center font-extrabold leading-none tracking-tighter text-white/[0.04] text-[16vw] mt-6 -mb-4">AssetMerkle</div>
             </motion.div>
         </footer>
     );

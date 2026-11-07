@@ -5,12 +5,12 @@ import GridBackground from './GridBackground';
 
 const FormInput = ({ icon: Icon, ...props }) => (
   <div className="relative w-full">
-    <div className="absolute top-1/2 left-4 -translate-y-1/2 text-yellow-400/50">
+    <div className="absolute top-1/2 left-4 -translate-y-1/2 text-blue-400/50">
       <Icon size={20} />
     </div>
     <input
       {...props}
-      className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all duration-300"
+      className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
     />
   </div>
 );
@@ -30,15 +30,15 @@ const SponsorPage = () => {
       <GridBackground />
       
       <motion.div
-        className="relative z-10 w-full max-w-6xl bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-yellow-900/10"
+        className="relative z-10 w-full max-w-6xl bg-black/20 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-blue-900/10"
         variants={cardVariants}
         initial="hidden"
         animate="visible"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           {/* Left Side - Information */}
-          <div className="bg-gradient-to-br from-yellow-500/20 to-amber-600/20 p-8 md:p-12 rounded-l-2xl flex flex-col justify-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-amber-500">
+          <div className="bg-gradient-to-br from-blue-500/20 to-violet-600/20 p-8 md:p-12 rounded-l-2xl flex flex-col justify-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-violet-500">
               Sponsor Us
             </h1>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
@@ -55,13 +55,13 @@ const SponsorPage = () => {
               <FormInput icon={Building} type="text" placeholder="Organisation / Company" />
               
               <div className="relative w-full">
-                <div className="absolute top-4 left-4 text-yellow-400/50 pointer-events-none">
+                <div className="absolute top-4 left-4 text-blue-400/50 pointer-events-none">
                   <MessageSquare size={20} />
                 </div>
                 <textarea
                   placeholder="Your expectations for our collaboration"
                   rows="4"
-                  className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all duration-300"
+                  className="w-full bg-black/30 border border-white/10 rounded-lg pl-12 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-all duration-300"
                 ></textarea>
               </div>
 
@@ -71,7 +71,7 @@ const SponsorPage = () => {
 
               <button
                 type="submit"
-                className="w-full mt-6 py-3 px-6 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-lg font-semibold text-lg text-black hover:scale-105 active:scale-100 transition-transform duration-300 shadow-lg shadow-yellow-500/20"
+                className="w-full mt-6 py-3 px-6 bg-gradient-to-r from-blue-500 to-violet-600 rounded-lg font-semibold text-lg text-white hover:scale-105 active:scale-100 transition-transform duration-300 shadow-lg shadow-blue-500/20"
               >
                 Submit Sponsor Request
               </button>

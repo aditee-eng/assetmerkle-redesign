@@ -15,7 +15,7 @@ const Layout = () => {
       {!isVibeathon && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 opacity-60">
           <motion.div
-            className="absolute -top-[10%] left-[10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent blur-[100px]"
+            className="absolute -top-[10%] left-[10%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-br from-violet-500/10 via-orange-500/5 to-transparent blur-[100px]"
             animate={{
               x: [0, 20, 0],
               y: [0, 30, 0],
@@ -41,7 +41,7 @@ const Layout = () => {
             }}
           />
           <motion.div
-            className="absolute bottom-[10%] left-[5%] w-[55vw] h-[55vw] rounded-full bg-gradient-to-br from-amber-500/10 via-transparent to-transparent blur-[100px]"
+            className="absolute bottom-[10%] left-[5%] w-[55vw] h-[55vw] rounded-full bg-gradient-to-br from-blue-500/12 via-transparent to-transparent blur-[100px]"
             animate={{
               x: [0, 40, 0],
               y: [0, -20, 0],

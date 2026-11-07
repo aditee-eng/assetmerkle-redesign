@@ -679,7 +679,7 @@ const Submission = () => {
       <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
         <div className="text-center">
 
-          <div className="w-10 h-10 mx-auto mb-5 border-2 border-yellow-500/30 border-t-yellow-400 rounded-full animate-spin" />
+          <div className="w-10 h-10 mx-auto mb-5 border-2 border-blue-500/30 border-t-blue-400 rounded-full animate-spin" />
 
           <p className="text-gray-400">
             Loading your submission...
@@ -718,7 +718,7 @@ const Submission = () => {
           className="w-full max-w-xl"
         >
 
-          <div className="rounded-2xl border border-yellow-500/20 bg-white/5 p-8 md:p-10 text-center backdrop-blur-md">
+          <div className="rounded-2xl border border-blue-500/20 bg-white/5 p-8 md:p-10 text-center backdrop-blur-md">
 
             {/* SUCCESS ICON */}
 
@@ -745,7 +745,7 @@ const Submission = () => {
 
             {/* TITLE */}
 
-            <p className="text-yellow-400 uppercase tracking-[0.25em] text-xs font-semibold mb-3">
+            <p className="text-blue-400 uppercase tracking-[0.25em] text-xs font-semibold mb-3">
               SheVibes
             </p>
 
@@ -761,13 +761,13 @@ const Submission = () => {
             {/* TEAM */}
 
             {team && (
-              <div className="rounded-xl bg-yellow-500/5 border border-yellow-500/10 px-5 py-4 mb-6">
+              <div className="rounded-xl bg-blue-500/5 border border-blue-500/10 px-5 py-4 mb-6">
 
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">
                   Team
                 </p>
 
-                <p className="text-xl font-semibold text-yellow-400">
+                <p className="text-xl font-semibold text-blue-400">
                   {team.code}
                 </p>
 
@@ -788,7 +788,7 @@ const Submission = () => {
 
                 await loadSubmission();
               }}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-yellow-500 to-amber-600 text-black font-semibold hover:from-yellow-400 hover:to-amber-500 transition-all"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-500 to-violet-600 text-white font-semibold hover:from-blue-400 hover:to-violet-500 transition-all"
             >
               View / Edit My Submission
             </button>
@@ -861,7 +861,7 @@ const Submission = () => {
                 event.target.value
               )
             }
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500/50 transition-all resize-none"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all resize-none"
           />
 
         ) : field.type === "select" ? (
@@ -875,7 +875,7 @@ const Submission = () => {
                 event.target.value
               )
             }
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500/50 transition-all"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
           >
 
             <option
@@ -913,7 +913,7 @@ const Submission = () => {
                 event.target.value
               )
             }
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500/50 focus:border-yellow-500/50 transition-all"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
           />
 
         )}
@@ -948,7 +948,7 @@ const Submission = () => {
           className="text-center mb-12"
         >
 
-          <p className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+          <p className="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
             SheVibes
           </p>
 
@@ -989,7 +989,7 @@ const Submission = () => {
             transition={{
               duration: 0.4,
             }}
-            className="mb-10 rounded-2xl border border-yellow-500/20 bg-yellow-500/5 p-5"
+            className="mb-10 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5"
           >
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -1000,7 +1000,7 @@ const Submission = () => {
                   Your Team
                 </p>
 
-                <p className="text-2xl font-bold text-yellow-400">
+                <p className="text-2xl font-bold text-blue-400">
                   {team.code}
                 </p>
 
@@ -1210,7 +1210,7 @@ const Submission = () => {
                     className="w-full py-4 px-6 rounded-xl font-bold text-base text-gray-400 bg-gray-600/60 border border-gray-500/40 cursor-not-allowed shadow-inner transition-all flex items-center justify-center gap-2"
                   >
 
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-violet-500" />
 
                     Need at least 2 members to submit
 
@@ -1221,7 +1221,7 @@ const Submission = () => {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-4 px-6 rounded-xl font-bold text-base text-black bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-400 hover:to-amber-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg flex items-center justify-center gap-2"
+                    className="w-full py-4 px-6 rounded-xl font-bold text-base text-white bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg flex items-center justify-center gap-2"
                   >
 
                     {submitting ? (
@@ -1270,11 +1270,11 @@ const Submission = () => {
                 BOX 2 — ROUND 2 ANNOUNCEMENT
             ================================================== */}
 
-            <div className="bg-gradient-to-br from-amber-500/15 via-pink-500/10 to-purple-500/15 border border-amber-500/30 rounded-2xl p-5 text-left backdrop-blur-md shadow-xl flex flex-col justify-between space-y-3">
+            <div className="bg-gradient-to-br from-violet-500/15 via-pink-500/10 to-purple-500/15 border border-violet-500/30 rounded-2xl p-5 text-left backdrop-blur-md shadow-xl flex flex-col justify-between space-y-3">
 
               <div className="space-y-2">
 
-                <div className="flex items-center gap-2 text-amber-400 font-extrabold text-sm tracking-wide">
+                <div className="flex items-center gap-2 text-violet-400 font-extrabold text-sm tracking-wide">
                   🔥 Round 2 Is Live!
                 </div>
 
@@ -1284,7 +1284,7 @@ const Submission = () => {
                   and submit your project before the deadline.
                 </p>
 
-                <div className="text-xs text-amber-300 font-semibold bg-amber-500/15 border border-amber-500/30 rounded-xl p-2.5">
+                <div className="text-xs text-violet-300 font-semibold bg-violet-500/15 border border-violet-500/30 rounded-xl p-2.5">
                   ⏰{" "}
                   <strong>
                     DEADLINE: 16 SEPTEMBER, 12:00 PM
