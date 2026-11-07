@@ -522,3 +522,5 @@ html {
   animation: action-lines 0.5s ease-out forwards;
 }
 
+
+h1, h2, h3 { word-spacing: 0.06em; }

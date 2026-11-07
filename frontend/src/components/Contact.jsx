@@ -18,7 +18,7 @@ const Contact = () => (
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-6xl">Partner with us</h2>
+        <h2 className="text-5xl font-extrabold leading-[1.05] tracking-normal text-white md:text-6xl">Partner with us</h2>
         <p className="mt-5 max-w-sm text-lg text-slate-400">
           Whether you want to collaborate or sponsor, your journey with our Web3 community starts here.
         </p>
@@ -42,7 +42,7 @@ const Contact = () => (
                 <Icon className="h-12 w-12" strokeWidth={1.4} />
               </span>
               <div className="relative flex-1">
-                <h3 className="text-3xl font-extrabold tracking-tight md:text-4xl">{title}</h3>
+                <h3 className="text-3xl font-extrabold tracking-normal md:text-4xl">{title}</h3>
                 <p className="mt-2 max-w-md text-white/80">{description}</p>
               </div>
               <span className="relative inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-950">

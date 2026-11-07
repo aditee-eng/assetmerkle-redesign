@@ -13,7 +13,7 @@ const TeamGallery = () => (
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="bg-gradient-to-b from-white to-slate-400 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent md:text-7xl">Our team</h2>
+        <h2 className="bg-gradient-to-b from-white to-slate-400 bg-clip-text text-5xl font-extrabold tracking-normal text-transparent md:text-7xl">Our team</h2>
         <p className="mt-5 text-lg text-slate-400">Students from IGDTUW learning, building and shipping Web3 projects together.</p>
       </motion.div>
 

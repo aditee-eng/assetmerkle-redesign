@@ -12,7 +12,7 @@ const JoinSteps = () => (
   <section className="relative w-full px-6 py-24 text-white">
     <div className="mx-auto max-w-6xl">
       <motion.h2
-        className="max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl"
+        className="max-w-3xl text-5xl font-extrabold leading-[1.05] tracking-normal md:text-7xl"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -33,7 +33,7 @@ const JoinSteps = () => (
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: i * 0.08 }}
           >
-            <span className="text-7xl font-extrabold leading-none tracking-tighter text-transparent transition-colors duration-500 [-webkit-text-stroke:2px_rgba(167,139,250,.7)] group-hover:text-violet-400 md:text-8xl">
+            <span className="text-7xl font-extrabold leading-none tracking-normaler text-transparent transition-colors duration-500 [-webkit-text-stroke:2px_rgba(167,139,250,.7)] group-hover:text-violet-400 md:text-8xl">
               {n}
             </span>
             <div>

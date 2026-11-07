@@ -118,7 +118,7 @@ const EventsCoverflow = ({ items, linkLabel = "View event" }) => {
           >
             <div>
               <p className="text-sm font-semibold text-violet-300">{current.date}</p>
-              <h3 className="mt-1 text-3xl font-extrabold tracking-tight md:text-4xl">{current.title}</h3>
+              <h3 className="mt-1 text-3xl font-extrabold tracking-normal md:text-4xl">{current.title}</h3>
               {current.subtitle && <p className="mt-1 text-sm font-semibold text-slate-400">{current.subtitle}</p>}
               <p className="mt-3 line-clamp-3 max-w-2xl text-slate-400">{current.description}</p>
             </div>

@@ -37,7 +37,7 @@ const Footer = () => {
             >
                 <div className="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-violet-600/90 via-indigo-600/90 to-blue-600/90 px-6 py-5 ring-1 ring-white/15">
                     <div>
-                        <h2 className="text-xl md:text-2xl font-extrabold tracking-tight text-white">Ready to build with us?</h2>
+                        <h2 className="text-xl md:text-2xl font-extrabold tracking-normal text-white">Ready to build with us?</h2>
                         <p className="mt-1 text-sm text-white/75">Join the community and start building Web3 projects at IGDTUW.</p>
                     </div>
                     <Link to={'/login'} className="rounded-full bg-white px-6 py-2.5 text-sm font-bold text-slate-950 transition-transform duration-300 hover:scale-105">Log in or sign up</Link>
@@ -103,7 +103,7 @@ const Footer = () => {
                         Assetmerkle © {new Date().getFullYear()} . All rights reserved.
                     </p>
                 </motion.div>
-                <div aria-hidden="true" className="pointer-events-none select-none text-center font-extrabold leading-none tracking-tighter text-white/[0.04] text-[16vw] mt-6 -mb-4">AssetMerkle</div>
+                <div aria-hidden="true" className="pointer-events-none select-none text-center font-extrabold leading-none tracking-normaler text-white/[0.04] text-[16vw] mt-6 -mb-4">AssetMerkle</div>
             </motion.div>
         </footer>
     );

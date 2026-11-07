@@ -21,7 +21,7 @@ const Benefits = () => (
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-5xl font-extrabold tracking-tight md:text-6xl">What you get as a member</h2>
+        <h2 className="text-5xl font-extrabold tracking-normal md:text-6xl">What you get as a member</h2>
         <p className="mt-4 text-lg text-slate-400">Everything the society offers to help you learn Web3 and build with it.</p>
       </motion.div>
 
